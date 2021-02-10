@@ -36,7 +36,14 @@ const AboutSection = () => {
         </motion.div>
       </DescriptionStyled>
       <ImageStyled>
-        <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
+        <motion.img
+          variants={photoAnim}
+          initial="hidden"
+          animate="show"
+          // add initial and animate to get out of being part in staggering
+          src={home1}
+          alt="guy with a camera"
+        />
       </ImageStyled>
       <Wave />
     </AboutStyled>
