@@ -8,6 +8,8 @@ import {
   ImageStyled,
 } from "../styles";
 import { motion } from "framer-motion";
+import { titleAnim, fade, photoAnim } from "../animation";
+import Wave from "./Wave";
 
 const AboutSection = () => {
   return (
@@ -15,27 +17,28 @@ const AboutSection = () => {
       <DescriptionStyled>
         <motion.div>
           <HideStyled>
-            <motion.h2>We work to make</motion.h2>
+            <motion.h2 variants={titleAnim}>We work to make</motion.h2>
           </HideStyled>
           <HideStyled>
-            <motion.h2>
+            <motion.h2 variants={titleAnim}>
               your <span>dreams</span>
             </motion.h2>
           </HideStyled>
           <HideStyled>
-            <motion.h2>come true.</motion.h2>
+            <motion.h2 variants={titleAnim}>come true.</motion.h2>
           </HideStyled>
-          <p>
+          <motion.p variants={fade}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, a
             est quo voluptas id magnam accusantium ipsam exercitationem ab
             eligendi?
-          </p>
-          <button>Contact us</button>
+          </motion.p>
+          <motion.button variants={fade}>Contact us</motion.button>
         </motion.div>
       </DescriptionStyled>
       <ImageStyled>
-        <img src={home1} alt="guy with a camera" />
+        <motion.img variants={photoAnim} src={home1} alt="guy with a camera" />
       </ImageStyled>
+      <Wave />
     </AboutStyled>
   );
 };
