@@ -1,28 +1,29 @@
 import React from "react";
 import home1 from "../img/home1.png";
-import styled from "styled-components";
+// import styled from "styled-components";
 import {
   AboutStyled,
   DescriptionStyled,
   HideStyled,
   ImageStyled,
 } from "../styles";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
     <AboutStyled>
       <DescriptionStyled>
-        <div className="title">
+        <motion.div>
           <HideStyled>
-            <h2>We work to make</h2>
+            <motion.h2>We work to make</motion.h2>
           </HideStyled>
           <HideStyled>
-            <h2>
+            <motion.h2>
               your <span>dreams</span>
-            </h2>
+            </motion.h2>
           </HideStyled>
           <HideStyled>
-            <h2>come true.</h2>
+            <motion.h2>come true.</motion.h2>
           </HideStyled>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, a
@@ -30,7 +31,7 @@ const AboutSection = () => {
             eligendi?
           </p>
           <button>Contact us</button>
-        </div>
+        </motion.div>
       </DescriptionStyled>
       <ImageStyled>
         <img src={home1} alt="guy with a camera" />
