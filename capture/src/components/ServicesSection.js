@@ -6,10 +6,19 @@ import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import styled from "styled-components";
 import { AboutStyled, DescriptionStyled, ImageStyled } from "../styles";
+import { useScroll } from "./useScroll";
+import { scrollReveal } from "../animation";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
+
   return (
-    <ServicesStyled>
+    <ServicesStyled
+      ref={element}
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+    >
       <DescriptionStyled>
         <h2>
           High <span>quality</span> services.

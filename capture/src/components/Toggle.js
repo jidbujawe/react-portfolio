@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fade } from "../animation";
 
 const Toggle = ({ children, title }) => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
   return (
     <motion.div
       layout
@@ -12,7 +12,7 @@ const Toggle = ({ children, title }) => {
       onClick={() => setToggle(!toggle)}
     >
       <motion.h4 layout>{title}</motion.h4>
-      {toggle ? "" : children}
+      {toggle ? children : ""}
       <motion.div className="faq-line"></motion.div>
     </motion.div>
   );
