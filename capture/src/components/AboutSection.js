@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import { titleAnim, fade, photoAnim } from "../animation";
 import Wave from "./Wave";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -32,7 +33,10 @@ const AboutSection = () => {
             est quo voluptas id magnam accusantium ipsam exercitationem ab
             eligendi?
           </motion.p>
-          <motion.button variants={fade}>Contact us</motion.button>
+
+          <Link to="/contact" exact>
+            <motion.button variants={fade}>Contact us</motion.button>
+          </Link>
         </motion.div>
       </DescriptionStyled>
       <ImageStyled>
